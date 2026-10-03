@@ -1,20 +1,18 @@
 # BalaPolice 巴拉國警察局
 
-巴拉國警察局官方靜態網站（HTML / CSS / JS）。
+靜態官方站。法律與處罰全文改於本倉庫 `docs/` 發布。
 
-- 風格對齊 [blagov.illusd.com](https://blagov.illusd.com/)
-- 完整法律條文與處罰內容（含無期徒刑、再犯加重）
-- 招募年齡：10 歲以上
+## 網站
 
-## 頁面
+- 部署：https://blapolice.illusd.com/
+- 政府站：https://blagov.illusd.com/
+
+## 法律與處罰（GitHub）
 
 | 檔案 | 說明 |
 |------|------|
-| `index.html` | 首頁 |
-| `laws.html` | 法律全文（互動） |
-| `penalties.html` | 處罰內容 |
-| `laws-fetch.html` | 純文字完整法律＋處罰（無 CSS／按鈕） |
+| [docs/laws.md](docs/laws.md) | 法律全文（Markdown） |
+| [docs/penalties.md](docs/penalties.md) | 處罰對照（Markdown） |
+| [docs/laws-and-penalties-full.txt](docs/laws-and-penalties-full.txt) | 法律＋處罰完整純文字（無 Markdown） |
 
-## 部署
-
-靜態檔案，可直接部署至 Vercel（專案 `balapolice-1`）或任意靜態主機。
+含 18 部法典、無期徒刑與再犯加重規定。罪刑法定。
