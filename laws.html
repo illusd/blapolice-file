@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>巴拉國法律全文 | BalaPolice</title>
-  <meta name="description" content="巴拉國與治安、警察、刑事、交通、隱私有關之現行法律全文">
+  <title>法律全文 | BalaPolice</title>
+  <meta name="description" content="巴拉國法律全文已發布於 GitHub">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
@@ -34,7 +34,6 @@
       </nav>
       <div class="header-actions">
         <a href="https://blagov.illusd.com/" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">政府官網</a>
-        <a href="laws-fetch.html" class="btn btn-ghost">純文字全文</a>
         <button class="menu-toggle" type="button" aria-label="開啟選單" aria-expanded="false" id="menu-toggle">
           <span></span><span></span>
         </button>
@@ -50,31 +49,35 @@
         <li><a href="index.html#news">公告</a></li>
         <li><a href="laws.html">法律</a></li>
         <li><a href="penalties.html">處罰</a></li>
-        <li><a href="laws-fetch.html">純文字全文</a></li>
       </ul>
     </nav>
   </div>
-  <main id="main" class="laws-page">
-    <section class="hero laws-hero">
+  <main id="main">
+    <section class="hero">
       <div class="container hero-inner">
-        <p class="hero-eyebrow">巴拉國 · 法律全文</p>
-        <h1 class="hero-title">現行法律<br><span class="hero-title-accent">完整條文</span></h1>
-        <p class="hero-desc">以下為巴拉國與治安、警察、刑事、交通及隱私相關之現行法律全文。罪刑法定；行為之處罰以行為時之法律有明文規定者為限。</p>
-        <label class="laws-search">
-          <span class="visually-hidden">搜尋法律</span>
-          <input type="search" id="laws-q" placeholder="搜尋條文、法典名稱…" autocomplete="off">
-        </label>
+        <p class="hero-eyebrow">巴拉國 · 法律</p>
+        <h1 class="hero-title">法律全文<br><span class="hero-title-accent">於 GitHub 公開</span></h1>
+        <p class="hero-desc">完整法典與條文已移至 GitHub 倉庫，便於版本追蹤與下載。請由下方連結開啟 Markdown 或純文字全文。</p>
+        <div class="hero-actions">
+          <a href="https://github.com/illusd/blapolice-file/blob/main/docs/laws.md" class="btn btn-primary" target="_blank" rel="noopener noreferrer">開啟法律 Markdown</a>
+          <a href="https://github.com/illusd/blapolice-file/blob/main/docs/laws-and-penalties-full.txt" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">純文字全文</a>
+        </div>
       </div>
     </section>
-    <section class="section laws-layout">
+    <section class="section">
       <div class="container">
-        <p class="laws-notice" id="laws-notice"></p>
-        <nav class="laws-toc" aria-label="法典目錄">
-          <p class="laws-toc-title">法典目錄</p>
-          <ol id="laws-toc"></ol>
-        </nav>
-        <div id="laws-content"></div>
-        <p class="laws-empty" id="laws-empty" hidden>找不到符合的條文。</p>
+        <div class="join-banner" data-stagger>
+          <div class="join-banner-text">
+            <h3>完整文本已移至 GitHub</h3>
+            <p>為便於版本管理與公開查閱，完整法律條文與處罰對照改以 GitHub 倉庫發布。網站僅保留入口連結。</p>
+            <ul class="join-list">
+              <li><a href="https://github.com/illusd/blapolice-file/blob/main/docs/laws.md" target="_blank" rel="noopener noreferrer">docs/laws.md — 法律全文（Markdown）</a></li>
+              <li><a href="https://github.com/illusd/blapolice-file/blob/main/docs/penalties.md" target="_blank" rel="noopener noreferrer">docs/penalties.md — 處罰對照（Markdown）</a></li>
+              <li><a href="https://github.com/illusd/blapolice-file/blob/main/docs/laws-and-penalties-full.txt" target="_blank" rel="noopener noreferrer">docs/laws-and-penalties-full.txt — 法律＋處罰純文字</a></li>
+            </ul>
+            <p style="margin-top:1rem"><a href="https://raw.githubusercontent.com/illusd/blapolice-file/main/docs/laws-and-penalties-full.txt" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">下載純文字（raw）</a></p>
+          </div>
+        </div>
       </div>
     </section>
   </main>
@@ -88,79 +91,11 @@
         <a href="index.html">首頁</a>
         <a href="laws.html">法律</a>
         <a href="penalties.html">處罰</a>
-        <a href="laws-fetch.html">純文字全文</a>
-        <a href="https://blagov.illusd.com/" target="_blank" rel="noopener noreferrer">政府官網</a>
+        <a href="https://github.com/illusd/blapolice-file" target="_blank" rel="noopener noreferrer">GitHub</a>
       </div>
       <p class="footer-copy">© 2026 巴拉國警察局 · 人民至上</p>
     </div>
   </footer>
-  <script src="laws-meta.js"></script>
-  <script src="laws-statutes-a1.js"></script>
-  <script src="laws-statutes-a2.js"></script>
-  <script src="laws-statutes-a.js"></script>
-  <script src="laws-statutes-b.js"></script>
-  <script src="laws-statutes.js"></script>
-  <script src="laws-penalties-a.js"></script>
-  <script src="laws-penalties-b.js"></script>
-  <script src="laws-penalties.js"></script>
-  <script src="laws-data.js"></script>
   <script src="script.js"></script>
-  <script>
-  (function () {
-    var d = window.BALA_LAWS;
-    if (!d) return;
-    var toc = document.getElementById("laws-toc");
-    var content = document.getElementById("laws-content");
-    var notice = document.getElementById("laws-notice");
-    var empty = document.getElementById("laws-empty");
-    if (notice) notice.textContent = d.notice || "";
-    d.statutes.forEach(function (s) {
-      var li = document.createElement("li");
-      li.innerHTML = '<a href="#' + s.id + '"><span class="laws-toc-code">' + s.code + '</span><span>' + s.title + '</span></a>';
-      toc.appendChild(li);
-    });
-    function render(list) {
-      content.innerHTML = "";
-      empty.hidden = list.length > 0;
-      list.forEach(function (s) {
-        var art = document.createElement("article");
-        art.className = "statute";
-        art.id = s.id;
-        var html = '<header class="statute-head"><p class="statute-meta">' + s.code + " · " + s.enacted + '</p><h2>' + s.title + '</h2><p class="statute-preamble">' + s.preamble + "</p></header>";
-        s.chapters.forEach(function (ch) {
-          html += '<section class="statute-chapter"><h3>' + ch.name + "</h3>";
-          ch.articles.forEach(function (a) {
-            html += '<div class="article"><h4>第 ' + a.no + " 條</h4><p>" + a.text + "</p></div>";
-          });
-          html += "</section>";
-        });
-        art.innerHTML = html;
-        content.appendChild(art);
-      });
-    }
-    var q = document.getElementById("laws-q");
-    if (q) {
-      q.addEventListener("input", function () {
-        var v = (q.value || "").trim().toLowerCase();
-        if (!v) { render(d.statutes); return; }
-        var out = [];
-        d.statutes.forEach(function (s) {
-          var copy = JSON.parse(JSON.stringify(s));
-          copy.chapters = copy.chapters.map(function (ch) {
-            return { name: ch.name, articles: ch.articles.filter(function (a) {
-              return (s.title + s.code + ch.name + a.text).toLowerCase().indexOf(v) !== -1;
-            })};
-          }).filter(function (ch) { return ch.articles.length; });
-          if (copy.chapters.length || (s.title + s.code + s.preamble).toLowerCase().indexOf(v) !== -1) {
-            if (!copy.chapters.length) copy.chapters = s.chapters;
-            out.push(copy);
-          }
-        });
-        render(out);
-      });
-    }
-    render(d.statutes);
-  })();
-  </script>
 </body>
 </html>

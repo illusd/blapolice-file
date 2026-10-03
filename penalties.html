@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>處罰內容 | BalaPolice</title>
-  <meta name="description" content="巴拉國各法律觸犯時之處罰內容，含無期徒刑與再犯加重規定">
+  <meta name="description" content="巴拉國處罰內容已發布於 GitHub">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
@@ -34,7 +34,6 @@
       </nav>
       <div class="header-actions">
         <a href="https://blagov.illusd.com/" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">政府官網</a>
-        <a href="laws-fetch.html" class="btn btn-ghost">純文字全文</a>
         <button class="menu-toggle" type="button" aria-label="開啟選單" aria-expanded="false" id="menu-toggle">
           <span></span><span></span>
         </button>
@@ -50,26 +49,35 @@
         <li><a href="index.html#news">公告</a></li>
         <li><a href="laws.html">法律</a></li>
         <li><a href="penalties.html">處罰</a></li>
-        <li><a href="laws-fetch.html">純文字全文</a></li>
       </ul>
     </nav>
   </div>
-  <main id="main" class="laws-page">
-    <section class="hero laws-hero">
+  <main id="main">
+    <section class="hero">
       <div class="container hero-inner">
         <p class="hero-eyebrow">巴拉國 · 處罰</p>
-        <h1 class="hero-title">處罰內容<br><span class="hero-title-accent">完整對照</span></h1>
-        <p class="hero-desc">各法律觸犯時之處罰內容。含無期徒刑、再犯加重（加重 1/2 或撤銷資格）等規定。罪刑法定。</p>
+        <h1 class="hero-title">處罰內容<br><span class="hero-title-accent">於 GitHub 公開</span></h1>
+        <p class="hero-desc">各法觸犯時之處罰、無期徒刑與再犯加重規定，完整文本改於 GitHub 發布。</p>
+        <div class="hero-actions">
+          <a href="https://github.com/illusd/blapolice-file/blob/main/docs/penalties.md" class="btn btn-primary" target="_blank" rel="noopener noreferrer">開啟處罰 Markdown</a>
+          <a href="https://github.com/illusd/blapolice-file/blob/main/docs/laws-and-penalties-full.txt" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">純文字全文</a>
+        </div>
       </div>
     </section>
-    <section class="section laws-layout">
+    <section class="section">
       <div class="container">
-        <p class="laws-notice" id="pen-notice"></p>
-        <nav class="laws-toc" aria-label="處罰目錄">
-          <p class="laws-toc-title">依法典</p>
-          <ol id="pen-toc"></ol>
-        </nav>
-        <div id="pen-content"></div>
+        <div class="join-banner" data-stagger>
+          <div class="join-banner-text">
+            <h3>完整文本已移至 GitHub</h3>
+            <p>為便於版本管理與公開查閱，完整法律條文與處罰對照改以 GitHub 倉庫發布。網站僅保留入口連結。</p>
+            <ul class="join-list">
+              <li><a href="https://github.com/illusd/blapolice-file/blob/main/docs/penalties.md" target="_blank" rel="noopener noreferrer">docs/penalties.md — 處罰對照（Markdown）</a></li>
+              <li><a href="https://github.com/illusd/blapolice-file/blob/main/docs/laws.md" target="_blank" rel="noopener noreferrer">docs/laws.md — 法律全文（Markdown）</a></li>
+              <li><a href="https://github.com/illusd/blapolice-file/blob/main/docs/laws-and-penalties-full.txt" target="_blank" rel="noopener noreferrer">docs/laws-and-penalties-full.txt — 法律＋處罰純文字</a></li>
+            </ul>
+            <p style="margin-top:1rem"><a href="https://raw.githubusercontent.com/illusd/blapolice-file/main/docs/laws-and-penalties-full.txt" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">下載純文字（raw）</a></p>
+          </div>
+        </div>
       </div>
     </section>
   </main>
@@ -83,52 +91,11 @@
         <a href="index.html">首頁</a>
         <a href="laws.html">法律</a>
         <a href="penalties.html">處罰</a>
-        <a href="laws-fetch.html">純文字全文</a>
-        <a href="https://blagov.illusd.com/" target="_blank" rel="noopener noreferrer">政府官網</a>
+        <a href="https://github.com/illusd/blapolice-file" target="_blank" rel="noopener noreferrer">GitHub</a>
       </div>
       <p class="footer-copy">© 2026 巴拉國警察局 · 人民至上</p>
     </div>
   </footer>
-  <script src="laws-meta.js"></script>
-  <script src="laws-statutes-a1.js"></script>
-  <script src="laws-statutes-a2.js"></script>
-  <script src="laws-statutes-a.js"></script>
-  <script src="laws-statutes-b.js"></script>
-  <script src="laws-statutes.js"></script>
-  <script src="laws-penalties-a.js"></script>
-  <script src="laws-penalties-b.js"></script>
-  <script src="laws-penalties.js"></script>
-  <script src="laws-data.js"></script>
   <script src="script.js"></script>
-  <script>
-  (function () {
-    var d = window.BALA_LAWS;
-    if (!d || !d.penalties) return;
-    var toc = document.getElementById("pen-toc");
-    var content = document.getElementById("pen-content");
-    var notice = document.getElementById("pen-notice");
-    if (notice) notice.textContent = d.notice || "";
-    d.penalties.forEach(function (p) {
-      var li = document.createElement("li");
-      li.innerHTML = '<a href="#pen-' + p.statuteId + '"><span>' + p.statuteTitle + '</span></a>';
-      toc.appendChild(li);
-      var art = document.createElement("article");
-      art.className = "statute";
-      art.id = "pen-" + p.statuteId;
-      var html = '<header class="statute-head"><h2>' + p.statuteTitle + "</h2></header>";
-      p.items.forEach(function (item) {
-        html += '<div class="penalty-item article">';
-        html += "<p><strong>罪名：</strong>" + item.offence + "</p>";
-        html += "<p><strong>條文：</strong>" + item.article + "</p>";
-        html += "<p><strong>主刑／主要處罰：</strong>" + item.principal + "</p>";
-        if (item.additional) html += "<p><strong>附加／其他：</strong>" + item.additional + "</p>";
-        if (item.juvenile) html += "<p><strong>少年／兒童：</strong>" + item.juvenile + "</p>";
-        html += "</div>";
-      });
-      art.innerHTML = html;
-      content.appendChild(art);
-    });
-  })();
-  </script>
 </body>
 </html>
